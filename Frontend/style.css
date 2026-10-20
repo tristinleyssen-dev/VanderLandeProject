@@ -1,0 +1,112 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eeeaea;
+    color:#000000;
+}
+
+/* Navigatie links */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 220px;
+    height: 100vh;
+    padding: 20px;
+
+    background: #0d1523;
+    border-right: 1px solid #26364d;
+}
+
+.sidebar h2 {
+    color: #f89e38;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 6px;
+
+    color: #a3b2c7;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.sidebar nav a:hover {
+    background: #192940;
+    color: white;
+}
+
+/* Hoofdinhoud */
+
+main {
+    margin-left: 220px;
+    padding: 30px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+.sensor-camera-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.sensor-panel,.camera-panel {
+    min-width: 0;
+}
+
+h1 {
+    margin-bottom: 5px;
+    color: #e9a227;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color:#e9a227;
+}
+
+/* Kaarten */
+
+.card {
+    padding: 20px;
+    margin-top: 15px;
+
+    background: #ffffff;
+    border: 1px solid #c2c3c4;
+    border-radius: 10px;
+}
+
+/* Mobiele weergave */
+
+@media (max-width: 600px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .sensor-camera-row {
+        grid-template-columns: 1fr;
+    }
+}
